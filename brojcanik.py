@@ -5,7 +5,7 @@ from std_msgs.msg import Int16
 class MyNode(Node):
     def __init__(self):
         super().__init__("brojcanik")
-        self.publisher_ = self.create_publisher(Int16, 'topic', 10)
+        self.publisher_ = self.create_publisher(Int16, 'broj', 10)
         timer_period = 1.0
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.count = 0
