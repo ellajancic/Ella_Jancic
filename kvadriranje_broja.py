@@ -7,11 +7,11 @@ class MyNode(Node):
         super().__init__("kvadriranje_broja")
         self.subscription = self.create_subscription(
             Int16, 
-            'topic', 
+            'broj', 
             self.listener_callback, 
             10
         )
-        self.publisher_ = self.create_publisher(Int16, 'topic1', 10)
+        self.publisher_ = self.create_publisher(Int16, 'kvadrat_broja', 10)
     
     def listener_callback(self, msg: Int16):
         x = msg.data
